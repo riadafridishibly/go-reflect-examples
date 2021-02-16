@@ -34,9 +34,10 @@ func (r *Results) GetAt(i index, holder interface{}) {
 
 	switch srcReflectValue.Kind() {
 	case reflect.Struct:
-		for i := 0; i < srcReflectValue.NumField(); i++ {
-			dstReflectValue.Set(srcReflectValue)
-		}
+        dstReflectValue.Set(srcReflectValue)
+		// for i := 0; i < srcReflectValue.NumField(); i++ {
+		// 	dstReflectValue.Set(srcReflectValue)
+		// }
 	}
 }
 
